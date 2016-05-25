@@ -21,13 +21,13 @@ namespace OneCityProject.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        //public DbSet<Vote> Vote { get; set; }
+        public DbSet<Vote> Vote { get; set; }
 
-        //public DbSet<PostLocation> PostLocation { get; set; }
+        public DbSet<PostLocation> PostLocation { get; set; }
 
-        //public DbSet<Post> Post { get; set; }
+        public DbSet<Post> Post { get; set; }
 
-        //public DbSet<User> User { get; set; }
+        public DbSet<User> User { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
