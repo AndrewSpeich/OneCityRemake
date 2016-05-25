@@ -18,6 +18,7 @@ namespace OneCityProject.Models
         public int UserID { get; set; }
 
         public virtual User User { get; set; }
+        
 
         [ForeignKey("Vote")]
         public int VoteId { get; set; }

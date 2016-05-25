@@ -10,16 +10,21 @@ namespace OneCityProject.Models
 {
     public class Vote
     {
-
+		[Key]
         public int ID { get; set; }
 
-        [Key]
+        
         [ForeignKey("Post")]
         public int PostID { get; set; }
 
-        [Key]
+		public virtual Post Post { get; set; }
+
+
+       
         [ForeignKey("User")]
         public int UserID { get; set; }
+
+		public virtual User User { get; set; }
 
         public string Direction { get; set; }
 
