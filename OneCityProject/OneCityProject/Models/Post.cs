@@ -11,17 +11,18 @@ namespace OneCityProject.Models
 {
     public class Post
     {
+		[Key]
         public int ID { get; set; }
 
-        [Key]
+        
         [ForeignKey("User")]
         public int UserID { get; set; }
 
-        [Key]
+        
         [ForeignKey("Vote")]
         public int VoteId { get; set; }
 
-        [Key]
+        
         [ForeignKey("PostLocation")]
         public int LocationID { get; set; }
 
