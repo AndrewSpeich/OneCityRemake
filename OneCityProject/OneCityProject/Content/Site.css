@@ -22,3 +22,31 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.post {
+    border-style: solid;
+    height: 170px;
+}
+
+.height_box {
+height:100%;
+}
+
+.half_box {
+height:50%;
+}
+
+.arrow {
+height:40%;
+}
+
+.count {
+height:20%;
+padding-top: 0px;
+color:red;
+}
+
+.element {
+  padding-top: 20px;
+  padding-left: 15px;
+}
