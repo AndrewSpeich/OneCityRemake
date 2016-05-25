@@ -4,7 +4,7 @@
 
 <div class="container">
     <br />
-    @{ 
+    @{
 
         List<string> list = new List<string>();
         list.Add("i");
@@ -12,35 +12,43 @@
 
         foreach (object post in list)
         {
-                <div class="row" id="post" style="border-style:solid; height:100px; overflow: hidden;">
-                    <div class="col-sm-3" id="upvote" style="height:100%;">
-                        lkxslkx <br />
-                        dsasdsad
+            <div class="row post" style="border-style:solid; height:170px;">
+                <div class="col-sm-3 upvote" style="height:100%; border-style:solid;">
+                    <div class="row">
                     </div>
-                    <div class="col-sm-9" id="detail" style="height:100%;">
-                        <div class="top-half">
-                            <div class="title">
-                                @post
-                            </div>
-                            <div class="status">
-                                @post
-                            </div>
+                    <div class="col-sm-8 buttons" style="border-style:solid;">
+
+                    </div>
+                    <div class="col-sm-4 counts" style="border-style:solid;">
+
+                    </div>
+                </div>
+
+                <div class="col-sm-9 detail" style="height:100%; padding:0;">
+                    <div class="row top-half" style="border-style:solid; height:50%; margin:0;">
+                        <div class="col-sm-3 status" style="border-style:solid; margin:0; height:100%;">
+                            hi carlos
                         </div>
-                        <div class="bottom-half">
-                            <div class="username">
-                                @post
-                            </div>
-                            <div class="time">
-                                @post
-                            </div>
-                            <div class="location">
-                                @post
-                            </div>
+                        <div class="col-sm-9 title" style="border-style:solid; margin:0; height:100%;">
+                            title
+                        </div>
+                    </div>
+
+                    <div class="row" style="border-style:solid; height:50%; margin:0;">
+                        <div class="col-sm-4 location" style="border-style: solid; height:100%" ">
+                            location
+                        </div>
+                        <div class="col-sm-4 username" style="border-style:solid; height:100%" ">
+                            username
+                        </div>
+                        <div class="col-sm-4 time" style="border-style:solid; height:100%">
+                            time
                         </div>
                     </div>
                 </div>
+            </div>
                 <br>
-            }
+        }
 
     }
 </div>
