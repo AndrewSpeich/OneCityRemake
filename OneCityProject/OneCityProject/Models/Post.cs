@@ -14,17 +14,19 @@ namespace OneCityProject.Models
 		[Key]
         public int ID { get; set; }
 
-        
-        [ForeignKey("User")]
-        public int UserID { get; set; }
+        public int UserId { get; set; }
+        [ForeignKey("UserId")]
+        public User user { get; set; }
 
-        
-        [ForeignKey("Vote")]
         public int VoteId { get; set; }
+        [ForeignKey("VoteId")]
+        public Vote vote { get; set; }
 
-        
-        [ForeignKey("PostLocation")]
-        public int LocationID { get; set; }
+
+
+        public int LocationId { get; set; }
+        [ForeignKey("LocationId")]
+        public PostLocation Location { get; set; }
 
         public bool Anonymous { get; set; }
 
