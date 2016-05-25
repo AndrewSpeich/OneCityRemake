@@ -11,32 +11,36 @@ namespace OneCityProject.Models
 {
     public class Post
     {
-		[Key]
+        [Key]
         public int ID { get; set; }
 
-        public int UserId { get; set; }
-        [ForeignKey("UserId")]
-        public User user { get; set; }
+		public bool Anonymous { get; set; }
 
-        public int VoteId { get; set; }
-        [ForeignKey("VoteId")]
-        public Vote vote { get; set; }
+		public DateTime Time { get; set; }
+
+		public string Status { get; set; }
+
+		public string Picture { get; set; }
+
+		public string GovernmentComment { get; set; }
+
+
+		[ForeignKey("ApplicationUser")]
+		public string UserID { get; set; }
+
+        public virtual ApplicationUser ApplicationUser { get; set; }
+
+
+		//[ForeignKey("Vote")]
+		//public int VoteId { get; set; }
+		//public virtual Vote Vote { get; set; }
+
+		//[ForeignKey("PostLocation")]
+		//public int LocationID { get; set; }
+
+		//public virtual PostLocation PostLocation { get; set; }
 
 
 
-        public int LocationId { get; set; }
-        [ForeignKey("LocationId")]
-        public PostLocation Location { get; set; }
-
-        public bool Anonymous { get; set; }
-
-        public DateTime Time { get; set; }
-
-        public string Status { get; set; }
-
-        public string Picture { get; set; }
-
-        public string GovernmentComment { get; set; }  
-
-    }
+	}
 }

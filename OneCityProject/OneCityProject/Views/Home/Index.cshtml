@@ -12,36 +12,39 @@
 
         foreach (object post in list)
         {
-            <div class="row post" style="border-style:solid; height:170px;">
-                <div class="col-sm-3 upvote" style="height:100%; border-style:solid;">
-                    <div class="row">
+            <div class="row post">
+                <div class="col-sm-3 height_box">
+                    <div class="col-sm-12 arrow" >
+                        <span class="glyphicon glyphicon-chevron-up element"></span>
                     </div>
-                    <div class="col-sm-8 buttons" style="border-style:solid;">
-
+                    <div class="col-sm-12 count">
+                        50,000
                     </div>
-                    <div class="col-sm-4 counts" style="border-style:solid;">
-
+                    <div class="col-sm-12 arrow" >
+                        <span class="glyphicon glyphicon-chevron-down element"></span>
                     </div>
                 </div>
-
-                <div class="col-sm-9 detail" style="height:100%; padding:0;">
-                    <div class="row top-half" style="border-style:solid; height:50%; margin:0;">
-                        <div class="col-sm-3 status" style="border-style:solid; margin:0; height:100%;">
+                <div class="col-sm-9 detail height_box">
+                    <div class="row top-half half_box">
+                        <div class="col-sm-3 status height_box">
                             hi carlos
                         </div>
-                        <div class="col-sm-9 title" style="border-style:solid; margin:0; height:100%;">
+                        <div class="col-sm-9 title height_box">
                             title
                         </div>
                     </div>
 
-                    <div class="row" style="border-style:solid; height:50%; margin:0;">
-                        <div class="col-sm-4 location" style="border-style: solid; height:100%" ">
+                    <div class="row half_box">
+                        <!----- location-->
+                        <div class="col-sm-4 height_box">
                             location
                         </div>
-                        <div class="col-sm-4 username" style="border-style:solid; height:100%" ">
+                        <!----- username-->
+                        <div class="col-sm-4 height_box">
                             username
                         </div>
-                        <div class="col-sm-4 time" style="border-style:solid; height:100%">
+                        <!----- time-->
+                        <div class="col-sm-4 height_box">
                             time
                         </div>
                     </div>
