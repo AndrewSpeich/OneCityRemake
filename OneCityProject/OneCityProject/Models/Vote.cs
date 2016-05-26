@@ -15,17 +15,18 @@ namespace OneCityProject.Models
 		public string Direction { get; set; }
 
 
-		[ForeignKey("Post")]
-		public int PostID { get; set; }
-		public virtual Post Post { get; set; }
+        [ForeignKey("Post")]
+        public int PostID { get; set; }
+        [Required]
+        public virtual Post Post { get; set; }
 
 
 
-		[ForeignKey("ApplicationUser")]
-		public string UserID { get; set; }
+        [ForeignKey("ApplicationUser")]
+        public string UserID { get; set; }
 
-		public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
 
-	}
+    }
 }
