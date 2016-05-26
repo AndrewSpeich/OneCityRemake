@@ -24,20 +24,16 @@ namespace OneCityProject.Models
 
 		public string GovernmentComment { get; set; }
 
+		[ForeignKey("PostLocation")]
+		public int PostLocationID { get; set; }
+
+		public virtual PostLocation PostLocation { get; set; }
+
 
 		[ForeignKey("ApplicationUser")]
 		public string UserID { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
-
-
-        
-      
-
-        [ForeignKey("PostLocation")]
-        public int LocationID { get; set; }
-        public virtual PostLocation PostLocation { get; set; }
-
 
 
     }
