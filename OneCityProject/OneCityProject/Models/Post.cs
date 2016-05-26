@@ -31,16 +31,14 @@ namespace OneCityProject.Models
         public virtual ApplicationUser ApplicationUser { get; set; }
 
 
-		//[ForeignKey("Vote")]
-		//public int VoteId { get; set; }
-		//public virtual Vote Vote { get; set; }
+        
+      
 
-		//[ForeignKey("PostLocation")]
-		//public int LocationID { get; set; }
-
-		//public virtual PostLocation PostLocation { get; set; }
+        [ForeignKey("PostLocation")]
+        public int LocationID { get; set; }
+        public virtual PostLocation PostLocation { get; set; }
 
 
 
-	}
+    }
 }
