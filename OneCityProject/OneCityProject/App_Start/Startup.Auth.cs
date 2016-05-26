@@ -55,8 +55,8 @@ namespace OneCityProject
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "473796016148872",
-               appSecret: "f8909720ada5580ffaf20aa828701210");
+               appId: "474122972782843",
+               appSecret: "5c66ae67c26bad46457db08ddf589869");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
