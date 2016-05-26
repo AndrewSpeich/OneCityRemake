@@ -26,5 +26,11 @@ namespace OneCityProject.Controllers
 
 			return View();
 		}
-	}
+
+        public ActionResult PostDetailView()
+        {
+
+            return View();
+        }
+    }
 }
