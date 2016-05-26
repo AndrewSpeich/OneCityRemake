@@ -14,15 +14,15 @@ namespace OneCityProject.Models
 		[Key]
 		public int ID { get; set; }
 
-        
-        //[ForeignKey("Post")]
-
-        public int PostID { get; set; }
+		public string Address { get; set; }
+		[ForeignKey("Post")]
+		
+		public int PostID { get; set; }
 
 		public virtual Post Post { get; set; }
 
-        public string Address { get; set; }
-        
 
-    }
+
+
+	}
 }

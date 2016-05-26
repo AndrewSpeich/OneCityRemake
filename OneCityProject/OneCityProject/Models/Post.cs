@@ -14,30 +14,33 @@ namespace OneCityProject.Models
         [Key]
         public int ID { get; set; }
 
-        [ForeignKey("User")]
-        public int UserID { get; set; }
+		public bool Anonymous { get; set; }
 
-        public virtual User User { get; set; }
-        
+		public DateTime Time { get; set; }
 
-        [ForeignKey("Vote")]
-        public int VoteId { get; set; }
-        public virtual ICollection<Vote> Votes { get; set; }
+		public string Status { get; set; }
 
-        [ForeignKey("PostLocation")]
-        public int LocationID { get; set; }
+		public string Picture { get; set; }
 
-        public virtual PostLocation PostLocation { get; set; }
+		public string GovernmentComment { get; set; }
 
-        public bool Anonymous { get; set; }
 
-        public DateTime Time { get; set; }
+		[ForeignKey("ApplicationUser")]
+		public string UserID { get; set; }
 
-        public string Status { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public string Picture { get; set; }
 
-        public string GovernmentComment { get; set; }  
+		//[ForeignKey("Vote")]
+		//public int VoteId { get; set; }
+		//public virtual Vote Vote { get; set; }
 
-    }
+		//[ForeignKey("PostLocation")]
+		//public int LocationID { get; set; }
+
+		//public virtual PostLocation PostLocation { get; set; }
+
+
+
+	}
 }
