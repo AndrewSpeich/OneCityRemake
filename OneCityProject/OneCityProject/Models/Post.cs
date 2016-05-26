@@ -24,12 +24,6 @@ namespace OneCityProject.Models
 
 		public string GovernmentComment { get; set; }
 
-
-		[ForeignKey("Vote")]
-		public int VotesId { get; set; }
-		public virtual ICollection<Vote> Vote { get; set; }
-
-
 		[ForeignKey("PostLocation")]
 		public int PostLocationID { get; set; }
 
@@ -42,11 +36,5 @@ namespace OneCityProject.Models
         public virtual ApplicationUser ApplicationUser { get; set; }
 
 
-
-
-
-
-
-
-	}
+    }
 }

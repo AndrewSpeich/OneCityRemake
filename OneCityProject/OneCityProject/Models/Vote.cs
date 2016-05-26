@@ -13,6 +13,7 @@ namespace OneCityProject.Models
 		public string Direction { get; set; }
 
 
+
 		[Key]
 		public int ID { get; set; }
 
@@ -21,12 +22,11 @@ namespace OneCityProject.Models
 		public virtual Post Post { get; set; }
 
 
+        [ForeignKey("ApplicationUser")]
+        public string UserID { get; set; }
 
-		[ForeignKey("ApplicationUser")]
-		public string UserID { get; set; }
-
-		public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
 
-	}
+    }
 }
