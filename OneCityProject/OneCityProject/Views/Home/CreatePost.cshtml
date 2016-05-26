@@ -1,71 +1,41 @@
 ﻿@{
     ViewBag.Title = "Post";
 }
-
-
-
-<div class="container postPadding">
-	<!--Names--------->
-	<div class="row postPadding">
-		<div class="username col-sm-8">
-			<h2>Welcome Carlos</h2>
+<br />
+<form>
+	<div class="form-group">
+		<div class="form-control-static"> UserName Here</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">  Anonymous Post?
+			</label>
 		</div>
-		<div class="col-sm-4 postPadding">
-			<form>
-				<input type="checkbox" name="anonymous" /> Anonymous Post?
-			</form>		
-		</div>
-			
 	</div>
 
-	<!--Issue-->
-	<div class="row postPadding">
+	<div class="form-group">
+		<label for="IssueTitle">Issue</label>
+		<input type="text" class="form-control" id="issueTitle" placeholder="Issue Title">
 
-		<form>
-			<label>Issue</label>
-			<input type="text" name="IssueBox" value="enter your issue" />
-
-		</form>
-	</div>
-	
-	<!--Street address or main corner -->
-	<div class="row postPadding">
-		<form>
-			<label>Street Address or Nearest Corner</label>
-			<input type="text" name="AddressBox" value="Street Address or Nearest Corner" />
-
-		</form>
-	</div>
-
-	<!--Description-->
-	<div class="row postPadding">
-		<form>
-			<label>Street Address or Nearest Corner</label>
-			<input type="text" name="AddressBox" value="Street Address or Nearest Corner" />
-
-		</form>
 	</div>
 
 
-	<!--Load image-->
-	<div class="row form-line" data-type="control_fileupload" id="id_6"e>
-		
-			<label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Upload your files here </label>
-			
-			<div id="cid_6" class="form-input-wide jf-required">
-				<div class="qq-uploader-buttonText-value">
-					Click to upload
-				</div>
-				<input class="form-upload-multiple" type="file" id="input_6" name="q6_uploadYour[]" multiple="multiple" file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" file-maxsize="10240" file-minsize="0" file-limit="0" />
-			</div>
-	
+
+	<div class="form-group">
+		<label for="address">Street Address or Nearest Corner</label>
+		<input type="text" class="form-control" name="AddressBox" placeholder="Street Address or Nearest Corner" id="address" />
 	</div>
 
-	<!--submitn button-->
-	<div class="row">
-		<input type="submit" name="submit" />
+	<div class="form-group">
+		<textarea class="description form-control" placeholder="What did you see?" rows="4"></textarea>
 	</div>
 
 
-</div>
+	<div class="form-group">
+		<label for="exampleInputFile">File input</label>
+		<input type="file" id="exampleInputFile">
+		<p class="help-block">Please upload a picture.</p>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
