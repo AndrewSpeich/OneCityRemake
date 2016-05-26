@@ -15,7 +15,6 @@ namespace OneCityProject.Controllers
 
 		public ActionResult Post()
 		{
-			ViewBag.Message = "Posting a problem.";
 
 			return View();
 		}
