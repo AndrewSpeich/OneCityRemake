@@ -59,7 +59,7 @@ namespace OneCityProject.Controllers
             }
 
             ViewBag.UserID = new SelectList(db.Users, "Id", "Email", post.UserID);
-            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.LocationID);
+            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.PostLocationID);
             return View(post);
         }
 
@@ -76,7 +76,7 @@ namespace OneCityProject.Controllers
                 return HttpNotFound();
             }
             ViewBag.UserID = new SelectList(db.Users, "Id", "Email", post.UserID);
-            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.LocationID);
+            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.PostLocationID);
             return View(post);
         }
 
@@ -94,35 +94,15 @@ namespace OneCityProject.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.UserID = new SelectList(db.Users, "Id", "Email", post.UserID);
-            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.LocationID);
+            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.PostLocationID);
             return View(post);
         }
 
-        // GET: Posts/Delete/5
-        //public ActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Post post = db.Post.Find(id);
-        //    if (post == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(post);
-        //}
+        public ActionResult CreatePost()
+        {
 
-        //// POST: Posts/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    Post post = db.Post.Find(id);
-        //    db.Post.Remove(post);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+            return View();
+        }
 
         protected override void Dispose(bool disposing)
         {
