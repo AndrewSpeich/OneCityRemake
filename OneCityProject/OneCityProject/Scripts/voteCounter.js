@@ -1,9 +1,17 @@
-﻿$(document).ready(function (e) {
-	//e.preventDefault();
-	$("#uparrow").find('span').on("click", function () {
-		$('#1000').html('Hello');
+﻿$(document).ready(function () {
+	alert("Hello!")
 
+	$("#uparrow").on("click", function () {
+		e.preventDefault();
+		$('#voteCounter').html("<p>Hello!!!</p>!");
+	});
+	
+	$("#downarrow").on("click", function () {
+		//e.preventDefault();
+		$('#voteCounter').html("World!");
 	});
 
 	
+
+
 });
