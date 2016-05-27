@@ -32,13 +32,14 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - One City, llc</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-	<script src="~/Scripts/voteCounter.js"></script>
+	<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+	@*<script src="~/Scripts/voteCounter.js"></script>*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,23 +1,27 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
 }
 <br />
 
 <div class="container">
     
     @{
-
+       
         List<string> list = new List<string>();
         list.Add("i");
         list.Add("a");
-	
-		int key = 1000;
-	
+
+        int key = 1000;
+        List<object> data = ViewBag.data;
 
 
-        foreach (object post in list)
+        foreach (Tuple<int,object> pair in data)
         {
             <!----- post-->
+            key = (pair.Item1);
+            object post = (pair.Item2);
+            //var name = post.UserID
             <div class="row post" style="overflow: hidden; overflow-x:auto;">
                 <!----- -->
                 <div class="col-xs-3 height_box">
@@ -27,12 +31,19 @@
                     </div>
 
                     <!----- count-->
-                    <div class="col-xs-12 count" id=@key>
+                    <div class="col-xs-12 count" id=voteCounter>
                         50,000
+
+						@*@{ 
+							var getCurrentVoteCount = Vote.PostID.GetValueOrDefault();
+						}*@
+
+
+
                     </div>
 
                     <!----- down arrow-->
-                    <div class="col-xs-12 downarrow" >
+                    <div class="col-xs-12" id="downarrow" >
                         <span class="glyphicon glyphicon-chevron-down element"></span>
                     </div>
                 </div>
