@@ -21,8 +21,8 @@
             <!----- post-->
             int votes = (pair.Item1);
             object post = (pair.Item2);
-            string name = post.ApplicationUser.Email;
-            string desc = post.Title;
+            //string name = post.ApplicationUser.Email;
+            //string desc = post.Title;
             bool anon;
             DateTime time;
             string locate;
@@ -58,26 +58,26 @@
                     <div class="row top-half half_box">
                         <!----- publisher-->
                         <div class="col-xs-3 status height_box">
-                            @name
+                           name
                         </div>
                         <!----- title-->
                         <div class="col-xs-9 title height_box">
-                            @desc
+                            desc
                         </div>
                     </div>
                     <!----- bottom side-->
                     <div class="row half_box">
                         <!----- location-->
                         <div class="col-xs-4 height_box">
-                            @locate
+                            locate
                         </div>
                         <!----- username-->
                         <div class="col-xs-4 height_box">
-                            @name
+                            name
                         </div>
                         <!----- time-->
                         <div class="col-xs-4 height_box">
-                            @time
+                            time
                         </div>
                     </div>
                 </div>
