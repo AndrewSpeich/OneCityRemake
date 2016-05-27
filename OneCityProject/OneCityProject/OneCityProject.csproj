@@ -285,6 +285,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\PostDetailView.cshtml" />
     <Content Include="Views\Home\CreatePost.cshtml" />
+    <Content Include="Views\Posts1\Create.cshtml" />
+    <Content Include="Views\Posts1\Delete.cshtml" />
+    <Content Include="Views\Posts1\Details.cshtml" />
+    <Content Include="Views\Posts1\Edit.cshtml" />
+    <Content Include="Views\Posts1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

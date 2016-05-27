@@ -22,7 +22,7 @@ namespace OneCityProject.Controllers
         }
 
         // GET: Posts/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult PostDetailView(int? id)
         {
             if (id == null)
             {
@@ -37,7 +37,7 @@ namespace OneCityProject.Controllers
         }
 
         // GET: Posts/Create
-        public ActionResult Create()
+        public ActionResult CreatePost()
         {
             ViewBag.UserID = new SelectList(db.Users, "Id", "Email"); 
             ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address");
@@ -49,18 +49,18 @@ namespace OneCityProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Anonymous,Time,Status,Picture,GovernmentComment,UserID,LocationID")] Post post)
+        public ActionResult CreatePost(/*[Bind(Include = "ID,Anonymous,Time,Status,Picture,GovernmentComment,UserID,LocationID")]*/ Post post)
         {
-            if (ModelState.IsValid)
-            {
-                db.Post.Add(post);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    db.Post.Add(post);
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
 
-            ViewBag.UserID = new SelectList(db.Users, "Id", "Email", post.UserID);
-            ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.PostLocationID);
-            return View(post);
+            //ViewBag.UserID = new SelectList(db.Users, "Id", "Email", post.UserID);
+            //ViewBag.LocationID = new SelectList(db.PostLocation, "ID", "Address", post.PostLocationID);
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Posts/Edit/5
@@ -98,11 +98,6 @@ namespace OneCityProject.Controllers
             return View(post);
         }
 
-        public ActionResult CreatePost()
-        {
-
-            return View();
-        }
 
         protected override void Dispose(bool disposing)
         {
