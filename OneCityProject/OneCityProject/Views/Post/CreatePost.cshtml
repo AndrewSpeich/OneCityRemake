@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Post";
+}
+<br />
+<form>
+	<div class="form-group">
+		<div class="form-control-static"> UserName Here</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">  Anonymous Post?
+			</label>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="IssueTitle">Issue</label>
+		<input type="text" class="form-control" id="issueTitle" placeholder="Issue Title">
+
+	</div>
+
+
+
+	<div class="form-group">
+		<label for="address">Street Address or Nearest Corner</label>
+		<input type="text" class="form-control" name="AddressBox" placeholder="Street Address or Nearest Corner" id="address" />
+	</div>
+
+	<div class="form-group">
+		<textarea class="description form-control" placeholder="What did you see?" rows="4"></textarea>
+	</div>
+
+
+	<div class="form-group">
+		<label for="exampleInputFile">File input</label>
+		<input type="file" id="exampleInputFile">
+		<p class="help-block">Please upload a picture.</p>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

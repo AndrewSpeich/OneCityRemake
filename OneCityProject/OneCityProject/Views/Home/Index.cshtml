@@ -79,3 +79,19 @@
     }
 </div>
 
+
+@Ajax.BeginForm("ShowDetails", "Ajax",
+							 new AjaxOptions
+							 {
+								 HttpMethod = "POST",
+								 UpdateTargetId = "voteCounter",
+								 InsertionMode = InsertionMode.Replace,
+								 LoadingElementId = "waitimage"
+							 })
+<h2> 50,000</h2>
+<h2>
+	Product Code: @Html.TextBox("txtCode")<br />
+	<input type="submit" value="Show Details" />
+	<input type="reset" value="Clear" />
+</h2>
+@{Html.EndForm();}

@@ -112,5 +112,13 @@ namespace OneCityProject.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+		public ActionResult Upvote()
+		{
+			//return
+		}
+
+
     }
 }
