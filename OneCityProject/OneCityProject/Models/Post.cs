@@ -16,7 +16,10 @@ namespace OneCityProject.Models
 
 		public bool Anonymous { get; set; }
 
-		public DateTime Time { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+        public DateTime Time { get; set; }
 
 		public string Status { get; set; }
 

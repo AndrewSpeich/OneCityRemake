@@ -19,8 +19,13 @@
         foreach (Tuple<int,object> pair in data)
         {
             <!----- post-->
-            key = (pair.Item1);
+            int votes = (pair.Item1);
             object post = (pair.Item2);
+            string name = post.ApplicationUser.Email;
+            string desc = post.Title;
+            bool anon;
+            DateTime time;
+            string locate;
             //var name = post.UserID
             <div class="row post" style="overflow: hidden; overflow-x:auto;">
                 <!----- -->
@@ -32,7 +37,7 @@
 
                     <!----- count-->
                     <div class="col-xs-12 count" id=voteCounter>
-                        50,000
+                        @votes
 
 						@*@{ 
 							var getCurrentVoteCount = Vote.PostID.GetValueOrDefault();
@@ -53,26 +58,26 @@
                     <div class="row top-half half_box">
                         <!----- publisher-->
                         <div class="col-xs-3 status height_box">
-                            hi carlos
+                            @name
                         </div>
                         <!----- title-->
                         <div class="col-xs-9 title height_box">
-                            title
+                            @desc
                         </div>
                     </div>
                     <!----- bottom side-->
                     <div class="row half_box">
                         <!----- location-->
                         <div class="col-xs-4 height_box">
-                            location
+                            @locate
                         </div>
                         <!----- username-->
                         <div class="col-xs-4 height_box">
-                            username
+                            @name
                         </div>
                         <!----- time-->
                         <div class="col-xs-4 height_box">
-                            time
+                            @time
                         </div>
                     </div>
                 </div>
