@@ -10,6 +10,10 @@
         List<string> list = new List<string>();
         list.Add("i");
         list.Add("a");
+	
+		int key = 1000;
+	
+
 
         foreach (object post in list)
         {
@@ -18,15 +22,17 @@
                 <!----- -->
                 <div class="col-xs-3 height_box">
                     <!----- up arrow-->
-                    <div class="col-xs-12 arrow" >
+                    <div class="col-xs-12" id="uparrow" >
                         <span class="glyphicon glyphicon-chevron-up element"></span>
                     </div>
+
                     <!----- count-->
-                    <div class="col-xs-12 count">
+                    <div class="col-xs-12 count" id=@key>
                         50,000
                     </div>
+
                     <!----- down arrow-->
-                    <div class="col-xs-12 arrow" >
+                    <div class="col-xs-12 downarrow" >
                         <span class="glyphicon glyphicon-chevron-down element"></span>
                     </div>
                 </div>
@@ -65,3 +71,4 @@
 
     }
 </div>
+
